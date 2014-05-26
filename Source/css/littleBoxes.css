@@ -1,4 +1,3 @@
-
 .loading:after {
     border:none;    
     border-top:3px solid #9999ff;
@@ -147,8 +146,7 @@ div.dropdown-list
     -webkit-transform: rotate(-45deg); 
 }
 .little-boxes-container div.drop:hover div
-{
-    background:#fff;
+{    background:#fff;
 }
 div.little-boxes-container.full-width li
 {
