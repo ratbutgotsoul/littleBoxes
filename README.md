@@ -1,5 +1,5 @@
 <b>Little Boxes</b> (..and they all look just the same)
 
-<p><b>Branch 1</b></p>
+<p><b>Master</b></p>
 
 <p>Ratbutgotsoul</p>
