@@ -65,9 +65,9 @@
             }
             var last=$boxes.find('li.box').last(); 
             if(!last.length){width=$mom.width()-30;return;} 
-            var width=($mom.width()-50)-(last.offset().left+last.width())-$mom.offset().left; 
+            var width=($mom.width()-50)-(last.offset().left+last.width())-$mom.offset().left-20; 
             if(width<30){width=$mom.width()-30;}
-            if(width>$mom.width()){width=$mom.width()-50;} 
+            if(width>$mom.width()){width=$mom.width()-70;} 
             $input.width(width); 
         };
 
