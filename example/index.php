@@ -1,28 +1,25 @@
-
+<!DOCTYPE html>
 <html>
 
 <head>
 
 <meta http-equiv="refresh" content="40">
 
-<script src="./js/jquery.js"></script>
+<script src="../js/jquery.js"></script>
 
-<script src="./js/littleBoxes.js"></script>
+<script src="../js/littleBoxes.js"></script>
 
-<link rel="stylesheet" type="text/css" href="./css/littleBoxes.css" />
+<link rel="stylesheet" type="text/css" href="../css/littleBoxes.css" />
 
 </head>
 
 <body>
 
 <h3>Simple</h3>
-<input id="simple" placeholder="Type..">
+<input id="simple" placeholder="Start typing..">
 
 <h3>Full Width</h3>
-<input id="fullWidth" placeholder="Type..">
-
-<h3>Monitor</h3>
-<div id="m"> Monitor </div>
+<input id="fullWidth" placeholder="Start typing..">
 
 <script>
 
@@ -31,26 +28,24 @@ $(document).ready(function(){
         $(this).littleBoxes({
             'apiUrl':'api.php',
             'initialValue':[
-                {'id':23,'box':'Nikos'}, //'suggestion':''},
-                {'id':223,'box':'Nick'}//,'suggestion':''}
-            ]
+                {'id':999,'box':'Rat'},
+                {'id':888,'box':'but'},
+                {'id':777,'box':'got'},
+                {'id':666,'box':'soul'}           ]
         });
     });
     $('input#fullWidth').each(function(){
         $(this).littleBoxes({
             'apiUrl':'api.php',
             'initialValue':[
-                {'id':254,'box':'Nk'}, //'suggestion':''},
-                {'id':22,'box':'Nick'}//,'suggestion':''}
+                {'id':999,'box':'Ratbutgotsoul'},
             ],
             'type':'full-width'
-
         });
     });
 });
 
 </script>
-
 
 </body>
 

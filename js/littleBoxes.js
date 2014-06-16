@@ -40,7 +40,6 @@
         $input.focus(function(){$(this).val('');}).clear();
 
         $boxes.add=function(s){
-            console.log( s );
             var id=s.data('id'),$check=$boxes.find("li[data-id='"+id+"']"),$e=null;
             if(!s.data('box-layout')){return;}
             if($check.length && !options['allowDuplicates'] ) 
@@ -85,7 +84,7 @@
             if(!s.id){s.id=s.box;}
             $(this).append($suggestion=$('<li>',{'html':s.suggestion,'class':options['suggestionClass']})
                 .data({'id':s.id,'box-layout':s.box})
-                .click(function(){console.log('23');$boxes.add($(this));})
+                .click(function(){$boxes.add($(this));})
                 .mouseover(function(){
                     $suggestions.find('li.selected').removeClass('selected');
                     $(this).addClass('selected');
