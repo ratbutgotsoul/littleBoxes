@@ -88,7 +88,6 @@
                 .mouseover(function(){
                     $suggestions.find('li.selected').removeClass('selected');
                     $(this).addClass('selected');
-                    console.log( $boxes );
                 })
             );
             return $suggestion;

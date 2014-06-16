@@ -3,8 +3,6 @@
 
 <head>
 
-<meta http-equiv="refresh" content="40">
-
 <script src="../js/jquery.js"></script>
 
 <script src="../js/littleBoxes.js"></script>
@@ -22,7 +20,6 @@
 <input id="fullWidth" placeholder="Start typing..">
 
 <script>
-
 $(document).ready(function(){
     $('input#simple').each(function(){
         $(this).littleBoxes({
@@ -44,7 +41,6 @@ $(document).ready(function(){
         });
     });
 });
-
 </script>
 
 </body>
