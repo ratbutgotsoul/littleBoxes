@@ -1,4 +1,4 @@
-<h1>Little Boxes</h1> (..and they all look just the same)
+<h1>Little Boxes <small>(..and they all look just the same)</small></h1>
 
 <p>Project works but its not ready yet.</p>
 
