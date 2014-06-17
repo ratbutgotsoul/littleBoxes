@@ -1,7 +1,7 @@
 /*
  *  Development by: Nikos P. Kallitsis
  *  Email: ratbutgotsoul@gmail.com
- *  Licence: .. 
+ *  Licence: Beer Licence
  */
 (function($) { 
     $.fn.littleBoxes = function( options ){     
@@ -151,7 +151,7 @@
                 $suggestions.show().find('li').first().addClass('selected');
                 setTimeout(function(){$mom.loading.hide()},444);
             });
-        }}).blur(function(){setTimeout(function(){$suggestions.clear();},100);});
+        }}).blur(function(){setTimeout(function(){$suggestions.clear();},300);});
 
         if(options['initialValue']){for(var i=0;i<options['initialValue'].length;i++){
             $suggestions.add(options['initialValue'][i]).trigger('click').remove();
