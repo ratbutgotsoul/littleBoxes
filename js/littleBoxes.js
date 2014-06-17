@@ -124,10 +124,7 @@
             else if(key==13){$boxes.add($selected);} // Enter
             else 
             {
-                if( $(this).val()==$output.attr('placeholder') )
-                {
-                    $(this).val('');
-                }
+                if($(this).val()==$output.attr('placeholder')){$(this).val('');}
                 if(stopTyping){clearTimeout(stopTyping);}
                 stopTyping=setTimeout(function(){$input.trigger('search');},250);
             }    
