@@ -6,6 +6,5 @@
 <h4>TODO</h4>
 <ul>
 <li>Fix broken css</li>
-<li>setWidth bug</li>
 <li>Agali agali..</li>
 </ul>
