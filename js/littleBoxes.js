@@ -1,7 +1,7 @@
 /*
  *  Development by: Nikos P. Kallitsis
  *  Email: ratbutgotsoul@gmail.com
- *  Licence: Beer Licence
+ *  Licence: Beer Licence (If you like this buy me a beer!) Its a shame not to share!
  */
 (function($) { 
     $.fn.littleBoxes = function( options ){     
@@ -59,22 +59,22 @@
         };
 
         $input.setWidth=function(){
+            var rsp=28,width=0,last=0;
             if($mom.hasClass('full-width')){
-                $input.width($boxes.width()-30);
+                $input.width($boxes.width()-rsp);
                 return;
             }
-            var last=$boxes.find('li.box').last(); 
-            if(!last.length){width=$mom.width()-30;return;} 
-            var width=($mom.width()-50)-(last.offset().left+last.width())-$mom.offset().left-20; 
-            if(width<30){width=$mom.width()-30;}
-            if(width>$mom.width()){width=$mom.width()-70;} 
-            $input.width(width); 
+            last=$boxes.find('li.box').last(),last_width=last.length?last.outerWidth()+parseInt(last.css('margin-left'))+parseInt(last.css('margin-right')):0;
+            if(!last_width){$input.width($mom.width()-rsp);return;}
+            width=$mom.innerWidth()-(last.offset().left+last_width-$mom.offset().left)-rsp;
+            if(width<60){width=60;}
+            $input.width(width);
         };
 
         $mom.output=function(){
             $mom.ids=[];
             $boxes.children('li.'+options['boxClass']).each(function(){$mom.ids.push($(this).data('id'));});
-            $output.val($mom.ids.join(','));
+            $output.val($mom.ids.join('+'));
             $input.setWidth();
             $mom.trigger('change');
         };
@@ -94,8 +94,6 @@
         };
 
         $suggestions.clear=function(){$(this).hide().find('li').remove();};
-
-        //$suggestions.next=function(){$(this).children('li.selected');};
 
         $input.keydown(function(e){
             var key=e.keyCode;
@@ -123,10 +121,7 @@
                     $selected.removeClass('selected').prev('li').addClass('selected');
                 }    
             }
-            else if(key==13) // Enter
-            {
-                $boxes.add($selected);
-            }
+            else if(key==13){$boxes.add($selected);} // Enter
             else 
             {
                 if( $(this).val()==$output.attr('placeholder') )
