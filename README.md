@@ -1,5 +1,7 @@
 <b>Little Boxes</b> (..and they all look just the same)
 
+<p>Project works but its not ready yet.</p>
+
 <p>Examples soon...</p>
 
 <h4>Features</h4>
